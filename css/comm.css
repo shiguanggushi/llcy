@@ -1,0 +1,148 @@
+@charset "utf-8";
+body { text-align:center; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:14px; color:#666;overflow-x: hidden;}
+html,body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote{ padding:0; margin:0;}
+table,td,tr,th{ font-size:12px;}
+li{ list-style-type:none;}
+img{ vertical-align:top; border:0;}
+ol,ul{ list-style:none;}
+a:link{ color:#666; text-decoration:none;}
+a:hover{ color:#3586f2; text-decoration:none;}
+a:visited{ color:#666; text-decoration:none;}
+textarea { resize:none; font-size:12px; } /*去掉火狐和谷歌浏览器的Textarea改变尺寸大小功能*/
+.clear{clear:both; height:0px;font-size:0; overflow:hidden;}
+
+.llcy-top-con{
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+.llcy-top-con .llcy-top-logo{
+	width: 1000px;
+	height: 86px;
+	margin: 0 auto; 
+}
+.llcy-top-con .llcy-top-logo a{
+	text-align: left;
+	display: block;
+	padding-top: 14px;
+}
+.htmleaf-container{
+	width: 100%;
+	height: 50px;
+	background: #d80c18;
+}
+.bgcolor-3{
+	width: 1000px;
+	margin: 0 auto;
+}
+.htmleaf-container ul {
+  font-size: 0;
+  position: relative;
+  padding: 0;
+  width: 630px;
+  float: left;
+}
+
+.bgcolor-3 li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 90px;
+  height: 50px;
+  background: #d80c18;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.bgcolor-3 li a{
+	font-size: 16px;
+	color: #FFFFFF;
+}
+li:hover{
+	background: #DA4453;
+}
+.bgcolor-3 .slider {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #46CFB0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.ripple {
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  position: absolute;
+  opacity: 1;
+}
+.rippleEffect {
+	 -webkit-animation: rippleDrop .6s linear;
+	 animation: rippleDrop .6s linear;
+}
+ @-webkit-keyframes rippleDrop { 
+  100% {
+	 -webkit-transform: scale(2);
+	 transform: scale(2);
+	 opacity: 0;
+	 filter:alpha(opacity=0);
+}
+}
+ @keyframes rippleDrop {  100% {
+	 -webkit-transform: scale(2);
+	 transform: scale(2);
+	 opacity: 0;
+	 filter:alpha(opacity=0);
+}
+}
+.bgcolor-3 .llcy-top-ss{
+	float: right;
+}
+.bgcolor-3 .llcy-top-ss input[type=text]{
+	width: 200px;
+	height: 30px;
+	margin-top: 10px;
+	border: 0;
+	padding-left: 6px;
+}
+.bgcolor-3 .llcy-top-ss input[type=text]:focus{
+	 outline-style: none;
+}
+.bgcolor-3 .llcy-top-ss a{
+	font-size: 16px;
+	color: #FFFFFF;
+	padding:0 0 0 12px;
+}
+/*
+ * 底部
+ */
+.llcy-footer{
+	width: 1000px;
+	height: 140px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-top: 2px solid #D91823;
+}
+.llcy-footer .foot-sm{
+	margin: 0 10px;
+}
+.llcy-footer .foot-sm:hover{
+	color: #3586F2;
+}
+.llcy-footer p{
+	margin: 10px;
+}
+.llcy-footer .foot-pic{
+	background: url(../img/pic.gif) no-repeat 780px 3px;
+}
