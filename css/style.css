@@ -635,9 +635,7 @@
 }
 .llcy-hzhb-contaier .hzhb-content .hzhb-list{
 	float: left;
-	padding-top: 5px;
-	padding-left: 11px;
-	padding-right: 3px;
+	padding:5px 3px;
 }
 /*
  * 友链
