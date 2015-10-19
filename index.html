@@ -2,6 +2,10 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<!--IE低版本浏览器渲染的方式-->
+		<meta http-equiv="X-UA-Compatible" content="IE-Edge,chrome=1" />
+		<!--设备缩放-->
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
 		<meta name="description" content="中国老龄产业研究院简介" />
 		<meta name="keywords" content="中国老龄产业研究院，老龄研究院，老龄产业" />
 		<meta name="toTop" content="true">
@@ -9,13 +13,29 @@
 		<link rel="shortcut icon" href="img/ico.png" />
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/comm.css" />
+		<link rel="stylesheet" href="css/outdatedBrowser.css" />
 		<script type="text/javascript" src="js/llcy-nav.js" ></script>
 		<script type="text/javascript" src="js/jquery.min.js" ></script>
 		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="js/Tony_Tab.js"></script>
         <script type="text/javascript" src="js/toTop.js"></script>
+        <!--<style type="text/css">
+        	*{filter:gray; color:gray;}
+ 		 html {
+		filter: grayscale(100%);
+		-webkit-filter: grayscale(100%);
+		-moz-filter: grayscale(100%);
+		-ms-filter: grayscale(100%);
+		-o-filter: grayscale(100%);
+		filter: url(desaturate.svg#grayscale);
+		filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+		-webkit-filter: grayscale(1);
+		}
+     
+        </style>-->
 	</head>
 	<body>
+		<div id="bo">
 		<header>
 			<div class="llcy-top-con">
 				<div class="llcy-top-logo">
@@ -39,7 +59,8 @@
 								<li class="slider"></li>
 							</ul>
 							<div class="llcy-top-ss">
-							<input type="text" placeholder="请输入关键词" /><a href="#">搜索</a>							</div>
+							<input type="search" placeholder="请输入关键词" /><a href="#">搜索</a>	
+							</div>
 						</div>
 					</div>
 					<!--导航结束-->
@@ -631,13 +652,47 @@
         		<p class="foot-pic">Copyright © 2008 - 2015 养老网 京ICP备09078674号 京公网安备1101055035号</p>
         	</div>
         </footer>
-        <script type="text/javascript">
+        </div>
+         <!-- Outdated Browser -->
+    <div id="outdated">
+         <h6>您的浏览器可以进博物馆了</h6>
+         <p>为了更好的浏览本网站，请立刻升级您的浏览器！ <a id="btnUpdate" href="http://outdatedbrowser.com/">立刻升级</a></p>
+         <p id="btnClose"><a href="#">关闭</a></p>
+     </div>
+
+        <!-- javascript -->
+        <script src="js/outdatedBrowser.min.js"></script>
+        <!-- 插件调用 -->
+        <script>
+            //事件监听器形式DOM就绪
+            function addLoadEvent(func) {
+                var oldonload = window.onload;
+                if (typeof window.onload != 'function') {
+                    window.onload = func;
+                     
+                } else {
+                    window.onload = function() {
+                        oldonload();
+                        func;
+                    }
+                }
+            }
+            //Dom Ready后调用函数
+            addLoadEvent(
+                outdatedBrowser({
+                    bgColor: '#222',
+                    color: '#c77405',
+                    lowerThan: 'borderImage'
+                })
+            );
+        </script>
+        <!--<script type="text/javascript">
     		/*
 			 * 解决safari浏览器导航兼容性问题
 			 */
 			$('.removeTextNodes').contents().filter(function() {
 			return this.nodeType === 3;
 			}).remove();
-        </script>
+        </script>-->
 	</body>
 </html>

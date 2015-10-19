@@ -5,9 +5,8 @@ table,td,tr,th{ font-size:12px;}
 li{ list-style-type:none;}
 img{ vertical-align:top; border:0;}
 ol,ul{ list-style:none;}
-a:link{ color:#666; text-decoration:none;}
+a:link,a:visited{ color:#666; text-decoration:none;}
 a:hover{ color:#3586f2; text-decoration:none;}
-a:visited{ color:#666; text-decoration:none;}
 textarea { resize:none; font-size:12px; } /*去掉火狐和谷歌浏览器的Textarea改变尺寸大小功能*/
 .clear{clear:both; height:0px;font-size:0; overflow:hidden;}
 
@@ -45,9 +44,10 @@ textarea { resize:none; font-size:12px; } /*去掉火狐和谷歌浏览器的Tex
 }
 
 .bgcolor-3 li {
-  display: inline-block;
+  /*display: inline-block;*/
   margin: 0;
   padding: 0;
+  float: left;
   width: 90px;
   height: 50px;
   background: #d80c18;
@@ -109,14 +109,14 @@ li:hover{
 .bgcolor-3 .llcy-top-ss{
 	float: right;
 }
-.bgcolor-3 .llcy-top-ss input[type=text]{
+.bgcolor-3 .llcy-top-ss input[type=search]{
 	width: 200px;
 	height: 30px;
 	margin-top: 10px;
 	border: 0;
 	padding-left: 6px;
 }
-.bgcolor-3 .llcy-top-ss input[type=text]:focus{
+.bgcolor-3 .llcy-top-ss input[type=search]:focus{
 	 outline-style: none;
 }
 .bgcolor-3 .llcy-top-ss a{
